@@ -1,0 +1,14 @@
+# Apache entry point for the backend (used when the backend folder is
+# linked into XAMPP htdocs). Every request is routed to public/index.php,
+# so source files, .env and logs are never served directly.
+
+Options -Indexes
+
+<FilesMatch "(^\.|\.(env|log|sql|md|example)$)">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^ public/index.php [END,QSA]
+</IfModule>

@@ -1,0 +1,22 @@
+# Secrets and local configuration
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Logs and runtime files
+backend/storage/logs/*.log
+backend/tests/.mock_state/
+
+# Submission packages
+submission/
+*.zip
+
+# Dependencies and builds
+frontend/node_modules/
+frontend/dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
